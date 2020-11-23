@@ -3,12 +3,19 @@ console.log("Problem Solving Q: 1 ");
 /* Longest Word */
 
 /*  
-Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length.
+Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. 
+If there are two or more words that are the same length, return the first word from the string with that length.
 */
 
 function longestWord(sen) {
-  // YOUR CODE HERE
-  //TEST
+  let longest = "";
+  const arr = sen.split(" ");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longest.length) {
+      longest = arr[i];
+    }
+  }
+  return longest;
 }
 
 /* 
