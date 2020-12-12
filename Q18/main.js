@@ -1,4 +1,4 @@
-console.log('Problem Solving Q:18 ');
+console.log("Problem Solving Q:18 ");
 
 /*  factorial*/
 
@@ -8,7 +8,18 @@ Given an integer, n, return n! (n factorial)
 */
 
 function factorial() {
-  // YOUR CODE HERE
+  function factorial(num) {
+    if (num < 0) {
+      return -1;
+    } else if (num === 0) {
+      return 1;
+    } else {
+      for (let i = num; i > 1; i--) {
+        num = num * i;
+      }
+      return num;
+    }
+  }
 }
 
 /* 
