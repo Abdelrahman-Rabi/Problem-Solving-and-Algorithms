@@ -1,4 +1,4 @@
-console.log('Problem Solving Q:15 ');
+console.log("Problem Solving Q:15 ");
 
 /*  commonCharacters*/
 
@@ -7,6 +7,11 @@ Write a function that accepts two strings as arguments, and returns only the cha
 Your function should return the common characters in the same order that they appear in the first argument. 
 Do not return duplicate characters and ignore whitespace in your returned string.
 */
+
+// Pseudo code
+// convert string 1 & string 2 into arrays
+// compare each element from string 1 array with each elemnt from string 2 array
+// adding condition to push the similar elemnts in new array
 
 function commonCharacters() {
   // YOUR CODE HERE
