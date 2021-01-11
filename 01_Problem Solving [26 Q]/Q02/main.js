@@ -10,11 +10,9 @@ Ignore punctuation and assume sen will not be empty.
 */
 
 function longestWord_2(sen) {
-  punctLess = sen.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-  noSpace = punctLess.replace(/\s{2,}/g, " ");
-
+  sen = sen.replace(/[^a-zA-Z ]/g, "");
+  const arr = sen.split(" ");
   let longest = "";
-  const arr = noSpace.split(" ");
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length > longest.length) {
       longest = arr[i];

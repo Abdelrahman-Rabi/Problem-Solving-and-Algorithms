@@ -8,8 +8,8 @@ If there are two or more words that are the same length, return the first word f
 */
 
 function longestWord(sen) {
-  let longest = "";
   const arr = sen.split(" ");
+  let longest = "";
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length > longest.length) {
       longest = arr[i];
