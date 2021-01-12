@@ -11,15 +11,17 @@ the first element will represent a list of comma-separated numbers sorted in asc
 */
 
 function findIntersection(strArr) {
-  const arrone = strarr[0].split(", ");
-  const arrtwo = strarr[1].split(", ");
+  const arrone = strArr[0].split(", ");
+  const arrtwo = strArr[1].split(", ");
   let result = [];
   for (let i = 0; i < arrone.length; i++) {
     if (arrtwo.indexOf(arrone[i]) !== -1) {
       result.push(arrone[i]);
     }
   }
-  return result.join(", ");
+  if (result.length > 0) {
+    return result.join(", ");
+  } else return false;
 }
 
 /* 
