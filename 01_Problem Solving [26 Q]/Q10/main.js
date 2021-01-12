@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 10');
+console.log("Problem Solving Q: 10");
 
 /* Times Of Most Freq Char */
 
@@ -6,14 +6,21 @@ console.log('Problem Solving Q: 10');
 Write a function that returns the number of occurrences of the most frequent character in a sentence.
 */
 
-function timesOfMostFreqChar() {
-  // YOUR CODE HERE
+function timesOfMostFreqChar(str) {
+  arr = str.replace(/[' ']/g, "").split("");
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]]) {
+      obj[arr[i]] += 1;
+    } else obj[arr[i]] = 1;
+  }
+  return Math.max(...Object.values(obj));
 }
 
 /* 
 Examples:
-answer1('hello world') // => 3
-answer1('hello world lol') // => 5
-answer1('hello world lol woooow') // => 7
-answer1('hello world lol wow www.com') // => 6
+timesOfMostFreqChar('hello world') // => 3
+timesOfMostFreqChar('hello world lol') // => 5
+timesOfMostFreqChar('hello world lol woooow') // => 7
+timesOfMostFreqChar('hello world lol wow www.com') // => 6
 */
