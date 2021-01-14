@@ -1,4 +1,4 @@
-console.log('Problem Solving Q:15 ');
+console.log("Problem Solving Q:15 ");
 
 /*  jointCharacters*/
 
@@ -8,8 +8,14 @@ Your function should return the common characters in the same order that they ap
 Do not return duplicate characters and ignore whitespace in your returned string.
 */
 
-function jointCharacters() {
-  // YOUR CODE HERE
+function jointCharacters(str1, str2) {
+  let result = "";
+  for (let char of str1) {
+    if (char !== " " && str2.includes(char) && !result.includes(char)) {
+      result += char;
+    }
+  }
+  return result;
 }
 
 /* 
