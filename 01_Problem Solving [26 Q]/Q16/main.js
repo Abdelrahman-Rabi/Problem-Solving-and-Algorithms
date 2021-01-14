@@ -1,4 +1,4 @@
-console.log('Problem Solving Q:16 ');
+console.log("Problem Solving Q:16 ");
 
 /* evenAppearance */
 
@@ -6,8 +6,13 @@ console.log('Problem Solving Q:16 ');
 Find the first item that appear an even number of times in an array.
 */
 
-function evenAppearance() {
-  // YOUR CODE HERE
+function evenAppearance(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr.shift();
+    if (arr.includes(num)) {
+      return num;
+    }
+  }
 }
 
 /* 
