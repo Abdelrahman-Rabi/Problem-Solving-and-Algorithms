@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 25');
+console.log("Problem Solving Q: 25");
 
 /*array check   */
 
@@ -6,8 +6,9 @@ console.log('Problem Solving Q: 25');
 Write a JavaScript function to check whether an `input` is an array or not.
 */
 
-function array() {
-  // YOUR CODE HERE
+function array(input) {
+  if (toString.call(input) === "[object Array]") return true;
+  return false;
 }
 
 /* 
