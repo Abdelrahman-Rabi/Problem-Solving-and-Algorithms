@@ -9,15 +9,20 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  let strA = stringA.replace(/[^A-Za-z0-9\_]/g, "").toLowerCase();
-  let strB = stringB.replace(/[^A-Za-z0-9\_]/g, "").toLowerCase();
-  if (strA.length === strB.length) {
-    let common = "";
-    for (let char of strA) {
-      if (strB.includes(char)) common += char;
+  const arrA = stringA
+    .replace(/[^A-Za-z0-9\_]/g, "")
+    .toLowerCase()
+    .split("");
+  const arrB = stringB
+    .replace(/[^A-Za-z0-9\_]/g, "")
+    .toLowerCase()
+    .split("");
+  if (arrA.length === arrB.length) {
+    for (let i = 0; i < arrA.length; i++) {
+      if (!arrB.includes(arrA[i])) return false;
     }
-    return strA === common;
   } else return false;
+  return true;
 }
 
 module.exports = anagrams;

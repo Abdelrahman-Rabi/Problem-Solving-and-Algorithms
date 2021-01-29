@@ -18,19 +18,14 @@
 //       '####'
 
 function steps(n) {
-  for (j = 2; j <= n; j--) {
-    let arr = [];
-    let str = "";
-    for (let i = 1; i <= n; i++) {
-      if (i < n - j) {
-        str += "#";
-      } else {
-        str += " ";
-      }
+  str = "";
+  for (let i = 1; i <= n; i++) {
+    str += "#";
+    for (let j = n - i; j >= 0; j--) {
+      str += " ";
     }
-    arr.push(str);
-    console.log(arr);
   }
+  console.log(str);
 }
 
 module.exports = steps;

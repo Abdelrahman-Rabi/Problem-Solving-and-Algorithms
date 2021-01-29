@@ -6,16 +6,15 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-  arr = str.split("");
-  obj = {};
-  for (let i = 0; i < arr.length; i++) {
-    if (obj[arr[i]] >= 1) {
-      obj[arr[i]] = obj[arr[i]] + 1;
+  const obj = {};
+  for (let char of str) {
+    if (obj[char]) {
+      obj[char] += 1;
     } else {
-      obj[arr[i]] = 1;
+      obj[char] = 1;
     }
   }
-  const max = Math.max(...Object.values(obj));
+  max = Math.max(...Object.values(obj));
   return Object.keys(obj).find((key) => obj[key] === max);
 }
 
